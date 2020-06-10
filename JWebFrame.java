@@ -164,6 +164,7 @@ public class JWebFrame extends JFrame {
 		 running.setText("Running:" + runningThreads);
          completed.setText("Complete:" + completedThreads);
          elapsed.setText("Elapsed:" + timeElapsed);
+         progress.setValue(100 * completedThreads / model.getRowCount());
 	}
 	
 	public void runThreads(int number) throws InterruptedException { 
